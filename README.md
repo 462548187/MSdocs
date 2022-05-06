@@ -25,6 +25,7 @@ nav:
                 - 测试计划: user_manual/test_track/test_plan.md
                 - 缺陷管理: user_manual/test_track/test_defect.md
                 - 报告: user_manual/test_track/test_report.md
+                - 用例拓展: user_manual/test_track/test_expand.md
           - 接口测试:
                 - 模块说明: user_manual/api_test/intro.md
                 - 首页: user_manual/api_test/home.md
@@ -33,11 +34,6 @@ nav:
                 - 接口测试报告中心: user_manual/api_test/test_report.md
                 - 用例步骤说明: user_manual/api_test/api_step.md
                 - 内置函数: user_manual/api_test/functions.md
-          - 性能测试:
-                - 模块说明: user_manual/load_test/intro.md
-                - 首页: user_manual/load_test/home.md
-                - 性能测试: user_manual/load_test/load_test.md
-                - 性能测试报告中心: user_manual/load_test/test_report.md
           - 项目设置:
                 - 项目信息: user_manual/project_management/project_info.md
                 - 项目成员: user_manual/project_management/project_user.md
@@ -46,13 +42,7 @@ nav:
                 - 文件管理: user_manual/project_management/file_management.md
                 - 自定义代码片段: user_manual/project_management/customcode_snippets.md
                 - 操作日志: user_manual/project_management/operation_log.md
-                - 应用管理: user_manual/project_management/application_management.md
-          - 系统设置:
-                - 模块说明: user_manual/system_management/intro.md
-                - 系统管理: user_manual/system_management/system.md
-                - 工作空间管理: user_manual/system_management/workspace.md
-                - 项目管理: user_manual/system_management/project.md
-                - 个人信息管理: user_manual/system_management/personal.md      
+                - 应用管理: user_manual/project_management/application_management.md   
     -
 ..........
 ```

@@ -2,10 +2,9 @@
 
 MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试。
 
-> 说明
-  - 目前公司使用的MeterSphere 系统非企业版本，有部分企业版本不能使用；
-  - 使用过程中有任何问题，
-  **欢迎联系：单应青(yingqing.shan@sayweee.com)，陈佳玲(jialing.chen@sayweee.com)**
+!!! error "注意"
+    
+    1、目前公司使用的MeterSphere 系统非企业版本，企业版本功能不可使用
 
 ## 界面展示
 ![!界面说明](./img/界面说明.png)
@@ -585,3 +584,15 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
     </tr>                        
   </tbody>
 </table>
+
+## 支持团队
+
+1. 文档维护人
+    - 佘素琴(suqin.she@sayweee.com)
+    - 徐素芬(sufen.xu@sayweee.com)
+2. 技术支持：
+    - 单应青(yingqing.shan@sayweee.com)
+    - 陈佳玲(jialing.chen@sayweee.com)
+   
+
+更新时间：2022年5月
