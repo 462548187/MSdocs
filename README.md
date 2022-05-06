@@ -9,8 +9,7 @@ git clone https://github.com/metersphere/docs.git
 
 ### 安装依赖
 ```bash
-cd docs
-pip install -r requirements/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 修改文档内容

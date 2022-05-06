@@ -1,4 +1,4 @@
 build:
   image: latest
 
-requirements_file: requirements/requirements.txt
+requirements_file: requirements.txt
