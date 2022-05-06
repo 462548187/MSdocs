@@ -2,6 +2,10 @@ site_name: "MS系统帮助文档"
 site_url: ""
 site_description: "Document"
 site_author: "yingqing.shan"
+# 静态资源输出文件夹
+site_dir: ../dist/docs
+
+copyright: Copyright &copy; 2022 <a href="https://www.sayweee.com">上海贝海网络科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">沪ICP备15010191号-1</a>
 
 
 edit_uri: "https://github.com/462548187/MSdocs/tree/master/docs"
@@ -23,6 +27,12 @@ theme:
           toggle:
               icon: material/weather-sunny
               name: 切换为深色模式
+    feature:
+      tabs: true
+    font:
+      text: Noto Serif
+      code: Roboto Mono
+
     features:
         - navigation.instant
         - navigation.tracking
@@ -31,6 +41,8 @@ theme:
         - search.suggest
         - search.highlight
         - search.share
+        - navigation.tabs # first top-level folders are shown as tabs
+        - content.code.annotate # add comment to code blocks
 
 nav:
     - 项目介绍: index.md
@@ -66,47 +78,125 @@ nav:
           - 操作日志: user_manual/project_management/operation_log.md
           - 应用管理: user_manual/project_management/application_management.md
 
-markdown_extensions:
-    - admonition
-    - codehilite:
-          guess_lang: True
-          linenums: False
-    - toc:
-          permalink: True
-    - footnotes
-    - attr_list
-    - def_list
-    - tables
-    - abbr
-    - md_in_html
-    - pymdownx.extra
-    - pymdownx.arithmatex
-    - pymdownx.betterem:
-          smart_enable: all
-    - pymdownx.caret
-    - pymdownx.critic
-    - pymdownx.details
-    - pymdownx.emoji:
-          emoji_generator: !!python/name:pymdownx.emoji.to_png
-    - pymdownx.inlinehilite
-    - pymdownx.magiclink
-    - pymdownx.mark
-    - pymdownx.smartsymbols
-    - pymdownx.superfences
-    - pymdownx.tasklist
-    - pymdownx.tilde
-    - pymdownx.betterem
-    - pymdownx.superfences
-    - pymdownx.progressbar
-    - lightgallery
 
+#
+# Plugins
+#
+plugins:
+  - search # must be included at the first place
+  # - tags: # we have our own internal tag feature
+        # tags_file: tags.md # generated links do not work
+  - awesome-pages:
+      # collapse_single_pages: true # replaced by navigation.indexes
+  # - section-index # must be after awesome-pages, replaced by navigation.indexes
+  - git-revision-date-localized:
+        enable_creation_date: true
+        fallback_to_build_date: true
+        type: iso_date
+  - encryptcontent:
+        hljs: false
+        arithmatex: false
+        mermaid2: false
+        password_button: true
+        remember_password: true
+        default_expire_dalay: 24
+        # reload_scripts:
+            # - "./assets/extra.js"
+  - exclude:
+        glob:
+          - '*/exclude/*'
+        regex:
+          - '.*\[exclude\].*'
+  # - pdf-with-js:
+        # enable: false # should enable only when need PDF files
+        # add_download_button: false
+        # display_header_footer: true
+        # header_template: >-
+            # <div style="font-size:8px; margin:auto; color:lightgray;">
+                # <span class="title"></span>
+            # </div>
+        # footer_template: >-
+            # <div style="font-size:8px; margin:auto; color:lightgray;">
+                # Page <span class="pageNumber"></span> of
+                # <span class="totalPages"></span>
+            # </div>
+
+
+
+markdown_extensions:
+    #
+    # Python Markdown
+    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
+    #
+    - abbr # add a small tooltip to elements
+    - admonition # add call-out blocks
+    - attr_list # allow to add HTML attributes and CSS classes
+    - def_list # add description lists
+    - footnotes # define inline footnotes
+    - meta # attach arbitrary key-value pairs to a document
+    - md_in_html # allow to write Markdown inside HTML elements
+    - tables # create tables in Markdown
+    - toc: # generate a table of contents from documents
+        permalink: '#' # anchor
+        toc_depth: 4 # header 1 to header 4
+        slugify: !!python/name:pymdownx.slugs.uslugify # convert title to html-compatible text
+    - sane_lists # make better lists
+    - smarty: # convert some special characters
+        smart_angled_quotes: true
+
+    #
+    # Python Markdown Extensions
+    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/
+    #
+    - pymdownx.arithmatex: # render math equations
+        generic: true
+    # - pymdownx.betterem: # improve the detection of Markup to emphasize text in Markdown
+        # smart_enable: all
+    - pymdownx.caret # define superscript
+    - pymdownx.mark # highlight text
+    - pymdownx.tilde # define subscript
+    - pymdownx.critic # track changes
+    - pymdownx.details # add collapsible call-outs
+    - pymdownx.emoji: # add inlines bundled and custom icons and emojis
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.superfences # define code blocks and nesting of code
+    - pymdownx.highlight: # highlight of code blocks
+        linenums_style: pymdownx-inline
+        # anchor_linenums: true # create anchor link on each line of code
+    - pymdownx.inlinehilite # highlight inline code blocks
+    - pymdownx.smartsymbols # convert some sequences of characters into their corresponding symbols
+    - pymdownx.snippets #  embed content from arbitrary files into a document
+    - pymdownx.tabbed: # group related content and code blocks under accessible tabs
+        alternate_style: true
+    - pymdownx.tasklist: # define list of task with checkbox
+        custom_checkbox: true
+    - pymdownx.escapeall:
+        hardbreak: true # use \ to create new line
+        nbsp: true # use \<space> to create &nbsp;
+    # - pymdownx.keys # syntax ++ctrl+c++ does not look clear in MD document
+    - pymdownx.progressbar
+
+
+extra:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
+  analytics:
+    provider: google
+    property: UA-42618265-2 # or G-XXXXXXXXXX
+
+  search:
+    language: 'en,zh,jp'
+
+  generator: false # hide the line "Made with Material for MkDocs"
 
 extra_css:
-    - css/extra.css
+  - css/view-bigimg.css
+  - css/extra.css
 
-
-copyright: Copyright &copy; 2022 <a href="https://www.sayweee.com">上海贝海网络科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">沪ICP备15010191号-1</a>
-
-plugins:
-    - search:
+extra_javascript:
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - js/view-bigimg.js
+  - js/extra.js
 

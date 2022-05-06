@@ -594,5 +594,4 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
     - 单应青(yingqing.shan@sayweee.com)
     - 陈佳玲(jialing.chen@sayweee.com)
    
-
-更新时间：2022年5月
+  
