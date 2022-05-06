@@ -1,14 +1,13 @@
 .md-header {
-  background-color: #783887;
-  top: 48px;
+  background-color: #2979ff;
 }
 
 .md-footer {
-  background-color: #783887;
+  background-color: #2979ff
 }
 
 .md-tabs {
-  background-color: #783887;
+  background-color: #2979ff
 }
 
 .md-footer-nav__link {
@@ -16,7 +15,7 @@
 }
 
 .md-main__inner {
-  margin-top: 3rem;
+  margin-top: 0rem;
 }
 
 .progress-label {

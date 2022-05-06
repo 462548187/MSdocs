@@ -1,21 +1,15 @@
-# 项目介绍
+## 项目介绍
 
-欢迎使用 MeterSphere。
+MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试。
 
-MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付，推动中国测试行业整体效率的提升。
-
-![!产品定位](./img/产品定位.png)
+> 说明
+  - 目前公司使用的MeterSphere 系统非企业版本，有部分企业版本不能使用；
+  - 使用过程中有任何问题，
+  **欢迎联系：单应青(yingqing.shan@sayweee.com)，陈佳玲(jialing.chen@sayweee.com)**
 
 ## 界面展示
 ![!界面说明](./img/界面说明.png)
 
-## 产品优势
-
--   **开源**：基于开源、兼容开源；按月发布新版本、日均下载安装超过100次、被大量客户验证；
--   **一站式**：一个产品全面涵盖测试跟踪、接口测试、UI测试、性能测试等功能并形成联动；
--   **全生命周期**：一个产品全满足从测试计划、测试执行到测试报告分析的全生命周期需求；
--   **持续测试**：无缝对接 Bug 管理工具和持续集成工具等，能将测试融入持续交付和 DevOps 体系；
--   **团队协作**：支持团队协作和资产沉淀，无论团队规模如何，总有适合的落地方式。
 
 ## 主要功能
 
@@ -24,16 +18,16 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
 -   **UI 测试**: 基于 Selenium 浏览器自动化，高度可复用的测试脚本； 无需复杂的代码编写，人人都可开展的低代码自动化测试；
 -   **性能测试**: 兼容 JMeter 的同时补足其分布式、监控与报告以及管理短板; 轻松帮助团队实现高并发、分布式的性能压测，完成压测任务的统一调度与管理。
 
-## 功能列表
+## 功能列表[已更新v1.20.0]
 
 <table>
-  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+  <td bgcolor="#2979ff" align="middle" style="font-weight:bold;color: white">
    功能模块
   </td>
-  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+  <td bgcolor="#2979ff" align="middle" style="font-weight:bold;color: white">
    一级功能
   </td>
-  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+  <td bgcolor="#2979ff" align="middle" style="font-weight:bold;color: white">
    一级功能描述
   </td>
   <tbody>
@@ -73,13 +67,13 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>搜索功能可使用高级组合查询</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">功能用例依赖关系设置（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">功能用例依赖关系设置（X-Pack）</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">公共用例库（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">公共用例库（X-Pack）</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">功能用例版本管理（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">功能用例版本管理（X-Pack）</td>
     </tr>
     <tr>
         <td rowspan="7">测试用例评审</td>
@@ -145,10 +139,10 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持配置缺陷自定义模版、自定义字段</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">自动生成JIRA缺陷模版（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">自动生成JIRA缺陷模版（X-Pack）</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">缺陷平台双向同步（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">缺陷平台双向同步（X-Pack）</td>
     </tr>
     <tr>
         <td rowspan="50">接口测试</td>
@@ -210,16 +204,16 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>IDEA插件同步接口定义</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">自动生成测试用例数据（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">自动生成测试用例数据（X-Pack）</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">依赖关系拓扑图展示（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">依赖关系拓扑图展示（X-Pack）</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">接口误报标识相关功能（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">接口误报标识相关功能（X-Pack）</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">接口版本管理（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">接口版本管理（X-Pack）</td>
     </tr>
     <tr>
         <td rowspan="24">接口自动化</td>
@@ -280,19 +274,19 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>场景一键添加到测试计划</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">批量执行接口支持使用K8s资源池（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">批量执行接口支持使用K8s资源池（X-Pack）</td>
     </tr>
      <tr>
-        <td style="background-color: #7838874d;">接口自动化版本管理（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">接口自动化版本管理（X-Pack）</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">MQTT协议插件支持（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">MQTT协议插件支持（X-Pack）</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">Thrift协议插件支持（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">Thrift协议插件支持（X-Pack）</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">Websocket协议插件支持（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">Websocket协议插件支持（X-Pack）</td>
     </tr>
     <tr>
         <td rowspan="3">测试报告</td>
@@ -304,22 +298,22 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
     <tr>
         <td>测试报告导出</td>
     </tr>
-	<tr style="background-color: #7838874d;">
+	<tr style="background-color: #2979ff4d;">
         <td rowspan="5">UI 测试（X-Pack）</td>
         <td >元素库</td>
 		<td >元素库模块方便管理元素</td>
     </tr>
-    <tr style="background-color: #7838874d;">
+    <tr style="background-color: #2979ff4d;">
         <td rowspan="3">UI自动化</td>
         <td>支持导入SeleniumIDE录制的side脚本文件</td>
     </tr>
-    <tr style="background-color: #7838874d;">
+    <tr style="background-color: #2979ff4d;">
         <td>支持在线添加并编辑UI自动化场景</td>
     </tr>
-	<tr style="background-color: #7838874d;">
+	<tr style="background-color: #2979ff4d;">
         <td>支持浏览器，弹窗，元素，鼠标，输入框等多种操作模式</td>
     </tr>
-    <tr style="background-color: #7838874d;">
+    <tr style="background-color: #2979ff4d;">
         <td >测试报告</td>
 		<td >支持查看UI自动化报告详情</td>
     </tr>
@@ -350,7 +344,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持查看测试任务变更历史</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">性能测试版本管理（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">性能测试版本管理（X-Pack）</td>
     </tr>  
     <tr>
         <td rowspan="5">测试执行</td>
@@ -363,10 +357,10 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持按线程组配置压力分配策略</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;"><p class="title-p">支持配置 JTL 文件留档策略，支持归档至指定的文件服务器（X-Pack）</p></td>
+        <td style="background-color: #2979ff4d;"><p class="title-p">支持配置 JTL 文件留档策略，支持归档至指定的文件服务器（X-Pack）</p></td>
     </tr>  
     <tr>
-        <td style="background-color: #7838874d;"><p class="title-p">性能测试支持两种配置，默认配置可以支持10万级别的TPS，百万级的性能测试 需要 X-Pack（X-Pack）</p></td>
+        <td style="background-color: #2979ff4d;"><p class="title-p">性能测试支持两种配置，默认配置可以支持10万级别的TPS，百万级的性能测试 需要 X-Pack（X-Pack）</p></td>
     </tr>
     <tr>
         <td rowspan="4">测试报告</td>
@@ -387,8 +381,8 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持测试用例趋势、测试用例统计等报表统计功能</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">项目报告（X-Pack）</td>
-        <td style="background-color: #7838874d;">增加项目报告，支持自定义设置报告内容，支持手动及定时发送</td>
+        <td style="background-color: #2979ff4d;">项目报告（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">增加项目报告，支持自定义设置报告内容，支持手动及定时发送</td>
     </tr>
     <tr>
         <td rowspan="6">项目设置</td>
@@ -405,11 +399,11 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
     <tr>
         <td>测试用例公共用例库、测试用例自定义ID、TCP Mock 端口范围等一些基础配置参数的启用、关闭配置</td>
     </tr>
-    <tr style="background-color: #7838874d;">
+    <tr style="background-color: #2979ff4d;">
         <td>误报库（X-Pack）</td>
         <td>误报库规则配置、启用配置</td>
     </tr>
-     <tr style="background-color: #7838874d;">
+     <tr style="background-color: #2979ff4d;">
         <td>版本管理（X-Pack）</td>
         <td>创建版本及启用配置</td>
     </tr>
@@ -447,7 +441,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>可设置最大并发数、定时同步JAR</td>
     </tr>                                                              
     <tr>
-        <td style="background-color: #7838874d;">Kubernetes资源池（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">Kubernetes资源池（X-Pack）</td>
     </tr>                                                                 
     <tr>
         <td rowspan="6">系统参数设置</td>
@@ -460,19 +454,19 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>LDAP配置</td>
     </tr> 
     <tr>
-        <td style="background-color: #7838874d;">自定义LOGO与主题配色（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">自定义LOGO与主题配色（X-Pack）</td>
     </tr> 
     <tr>
-        <td style="background-color: #7838874d;">支持CAS、OIDC单点登录协议（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">支持CAS、OIDC单点登录协议（X-Pack）</td>
     </tr>  
     <tr>
-        <td style="background-color: #7838874d;">功能模块启用禁用控制（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">功能模块启用禁用控制（X-Pack）</td>
     </tr> 
-    <tr style="background-color: #7838874d;">
+    <tr style="background-color: #2979ff4d;">
         <td>配额管理</td>
         <td>设置工作空间接口测试数、性能测试数、最大并发数、压测时长、可用资源池等配额</td>
     </tr>  
-    <tr style="background-color: #7838874d;">
+    <tr style="background-color: #2979ff4d;">
         <td>授权管理</td>
         <td>上传企业版License</td>
     </tr>
@@ -492,14 +486,14 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>自定义通知事件及通知人</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">自定义消息通知模板（X-Pack）</td>
+        <td style="background-color: #2979ff4d;">自定义消息通知模板（X-Pack）</td>
     </tr>
     <tr>
         <td rowspan="2">服务集成</td>
         <td>支持对接Jira、TAPD、禅道平台</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;">支持对接Azure DevOps平台</td>
+        <td style="background-color: #2979ff4d;">支持对接Azure DevOps平台</td>
     </tr>
     <tr>
         <td rowspan="2">项目管理</td>
@@ -516,20 +510,20 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>模版管理</td>
         <td>管理功能用例、缺陷的自定义字段和模版</td>
     </tr>
-    <tr style="background-color: #7838874d;">
+    <tr style="background-color: #2979ff4d;">
         <td rowspan="4">我的工作台（X-Pack）</td>
         <td>我的仪表盘</td>
         <td>聚焦与自己相关的内容，包括待办的任务、自己关注和创建的各种用例、缺陷等，点击某个资源可快速跳转到对应功能菜单中</td>
     </tr>    
-    <tr rowspan="2" style="background-color: #7838874d;">    
+    <tr rowspan="2" style="background-color: #2979ff4d;">    
         <td>我的待办</td>
         <td>当前所在工作空间中，与登录用户有关的所有项目下的待办工作内容</td>
     </tr>
-    <tr rowspan="2" style="background-color: #7838874d;">    
+    <tr rowspan="2" style="background-color: #2979ff4d;">    
         <td>我关注的</td>
         <td>当前所在工作空间中，与登录用户有关的所有项目下的“我的关注”内容</td>
     </tr>
-    <tr rowspan="2" style="background-color: #7838874d;">    
+    <tr rowspan="2" style="background-color: #2979ff4d;">    
         <td>我创建的</td>
         <td>当前所在工作空间中，与登录用户有关的所有项目下的“我创建的”内容</td>
     </tr> 
@@ -591,19 +585,3 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
     </tr>                        
   </tbody>
 </table>
-
-## 精品课程
-
--   [玩转 MeterSphere 开源持续测试平台系列教程之测试跟踪](https://live.vhall.com/v3/lives/subscribe/107566953)
--   [玩转 MeterSphere 开源持续测试平台系列教程之接口测试](https://live.vhall.com/v3/lives/subscribe/657846498)
--   [玩转 MeterSphere 开源持续测试平台系列教程之性能测试](https://live.vhall.com/v3/lives/subscribe/703013378)
--   [玩转 MeterSphere 开源持续测试平台系列教程之企业版 X-Pack 增强功能](https://live.vhall.com/v3/lives/subscribe/419824723)
-
-## 了解更多
-
--   [持续测试白皮书 v1.0](https://jinshuju.net/f/KqFUhq)
--   [如何构建持续测试平台？](https://metersphere.io/download/how_to_build_a_continous_platform-202112.pdf)
--   [揭秘MeterSphere一站式开源持续测试平台](https://live.vhall.com/725359622)
--   [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
--   [MeterSphere 知识库](https://kb.fit2cloud.com/categories/metersphere)
--   [JMeter 资源合集](./awesome-jmeter.md)
