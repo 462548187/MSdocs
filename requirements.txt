@@ -9,3 +9,5 @@ mkdocs-roamlinks-plugin
 mkdocs-exclude
 mkdocs-awesome-pages-plugin
 mkdocs-encryptcontent-plugin
+markdown-captions
+markdown-customblocks

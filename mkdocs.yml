@@ -3,46 +3,58 @@ site_url: ""
 site_description: "Document"
 site_author: "yingqing.shan"
 # 静态资源输出文件夹
-site_dir: ../dist/docs
+site_dir: ./dist/docs
 
-copyright: Copyright &copy; 2022 <a href="https://www.sayweee.com">上海贝海网络科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">沪ICP备15010191号-1</a>
+copyright: Copyright &copy; 2022 <a href="https://www.sayweee.com">Weee!</a>, All Rights Reserved.
 
+hide:
+  - navigation
 
 edit_uri: "https://github.com/462548187/MSdocs/tree/master/docs"
 theme:
-    name: "material"
-    language: "zh"
+    name: material  #名称
+    language: zh    #语言
+    features:
+      - navigation.top   #返回顶端
+      - navigation.expand  #侧边栏全展开
+      - search.highlight    #搜索词高亮
+      - search.suggest  #搜索省略回车
+      - navigation.instant  #即时加载
+      - navigation.tracking  #锚点跟踪
+      - navigation.indexes  #次级索引页，直接将文档附加到章节，提供概览页面，在相应文件夹中创建index.md添加到导航nav开头。不兼容toc.integrate。
+      - search.share  #搜索共享
+      - navigation.tabs # first top-level folders are shown as tabs
+      - content.code.annotate # add comment to code blocks
+      - navigation.tabs # first top-level folders are shown as tabs
+
+
+    palette:     #切换昼夜模式的颜色，审美差就用默认，专业点就自定义
+      - media: "(prefers-color-scheme: light)"
+        scheme: default  #配色方案：浅色模式
+        primary: indigo  #原色，默认蓝，用于标题、侧边栏、文本链接和其他几个组件
+        accent: indigo  #强调色，默认蓝，可以交互的元素如悬停链接、按钮和滚动条
+        toggle:
+          icon: material/weather-sunny #图标，太阳
+          name: Switch to dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate  #配色方案：深色模式
+        toggle:
+          icon: material/weather-night  #图标，月亮
+          name: Switch to light mode
+    font:  #字体，false 则阻止从Google加载字体
+    # 内置隐私插件自动下载和自托管 Web 字体文件，无需阻止。其他字体使用附加样式表 extra.css 。
+      text: Roboto  #常规字体，默认Roboto，正文、标题等，300、400、400i和700
+      code: Roboto Mono  #等宽字体，默认Roboto Mono，代码块，400
+
     highlightjs: true
     hljs_languages:
         - yaml
         - django
-    palette:
-        - scheme: default
-          accent: deep purple
-          toggle:
-              icon: material/weather-night
-              name: 切换为浅色模式
-        - scheme: slate
-          accent: deep purple
-          toggle:
-              icon: material/weather-sunny
-              name: 切换为深色模式
+
     feature:
       tabs: true
-    font:
-      text: Noto Serif
-      code: Roboto Mono
 
-    features:
-        - navigation.instant
-        - navigation.tracking
-        - navigation.indexes
-        - navigation.top
-        - search.suggest
-        - search.highlight
-        - search.share
-        - navigation.tabs # first top-level folders are shown as tabs
-        - content.code.annotate # add comment to code blocks
+
 
 nav:
     - 项目介绍: index.md
@@ -79,9 +91,6 @@ nav:
           - 应用管理: user_manual/project_management/application_management.md
 
 
-#
-# Plugins
-#
 plugins:
   - search # must be included at the first place
   # - tags: # we have our own internal tag feature
@@ -100,82 +109,73 @@ plugins:
         password_button: true
         remember_password: true
         default_expire_dalay: 24
-        # reload_scripts:
-            # - "./assets/extra.js"
+
   - exclude:
         glob:
           - '*/exclude/*'
         regex:
           - '.*\[exclude\].*'
-  # - pdf-with-js:
-        # enable: false # should enable only when need PDF files
-        # add_download_button: false
-        # display_header_footer: true
-        # header_template: >-
-            # <div style="font-size:8px; margin:auto; color:lightgray;">
-                # <span class="title"></span>
-            # </div>
-        # footer_template: >-
-            # <div style="font-size:8px; margin:auto; color:lightgray;">
-                # Page <span class="pageNumber"></span> of
-                # <span class="totalPages"></span>
-            # </div>
 
 
-
-markdown_extensions:
-    #
-    # Python Markdown
-    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
-    #
-    - abbr # add a small tooltip to elements
-    - admonition # add call-out blocks
-    - attr_list # allow to add HTML attributes and CSS classes
-    - def_list # add description lists
-    - footnotes # define inline footnotes
-    - meta # attach arbitrary key-value pairs to a document
-    - md_in_html # allow to write Markdown inside HTML elements
-    - tables # create tables in Markdown
-    - toc: # generate a table of contents from documents
-        permalink: '#' # anchor
-        toc_depth: 4 # header 1 to header 4
+markdown_extensions:  #推荐配置Markdown基本语法及其扩展
+    - abbr #缩写或名词
+    - pymdownx.snippets  #片段，将任意文件或部分内容嵌入到文档中
+    - admonition  #警告或标注
+    - pymdownx.details  #细节折叠
+    - pymdownx.superfences  #超级围栏
+    - attr_list   #属性列表（按钮-颜色图标）
+    - def_list   #定义列表
+    - footnotes  #行内脚注
+    - meta   #元数据
+    - md_in_html  #HTML 中的 Markdown
+    - toc:  #目录
+        toc_depth: 3 #目录深度，默认6，0则隐藏
+        title: On this page  #默认值，自动获取
+        permalink: true   #每个标题的末尾添加段落符号锚链接，默认false
+#        permalink: ⚓︎  #每个标题的末尾添加自定义符号锚链接
+        permalink_title: Anchor link to this section for reference #在悬停时显示并由屏幕阅读器阅读的锚链接的标题
         slugify: !!python/name:pymdownx.slugs.uslugify # convert title to html-compatible text
+    - tables #表格（未推荐）
+    - pymdownx.arithmatex:  #数学公式
+        generic: true
+    - pymdownx.betterem:   #粗体斜体
+        smart_enable: all
+    - pymdownx.caret  #插入角标符号(`^`)
+    - pymdownx.mark  #双等号(`==`)
+    - pymdownx.tilde  #波浪号(`~`)
+    - pymdownx.critic:  #评论家(突出显示建议更改)，未推荐
+  #      mode: reject #应如何解析标记，默认view查看更改，accept是接受更改，reject是拒绝更改
+    - pymdownx.keys   #键盘键和组合
+    - pymdownx.emoji:  #表情符号
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+  #      options: #默认无
+  #        custom_icons: #允许列出要在 Markdown 中使用的附加图标集的文件夹
+  #          - overrides/.icons
+    - pymdownx.highlight:  #代码高亮，对代码块（SuperFences）和行内代码块（InlineHilite）的语法突出显示
+         linenums_style: pymdownx-inline
+    - pymdownx.inlinehilite  #行内高亮
+    - pymdownx.smartsymbols  #智能符号
+    - pymdownx.progressbar
+    - pymdownx.tabbed:  #内容选项卡
+        alternate_style: true  #启用内容选项卡替代样式，必须开启
+    - pymdownx.tasklist:  #任务列表
+        custom_checkbox: true   #切换复选框的呈现样式，将原生复选框样式替换为漂亮的图标
+  #      clickable_checkbox: true  #切换复选框是否可点击，默认false，不建议开
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
     - sane_lists # make better lists
     - smarty: # convert some special characters
         smart_angled_quotes: true
-
-    #
-    # Python Markdown Extensions
-    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/
-    #
-    - pymdownx.arithmatex: # render math equations
-        generic: true
-    # - pymdownx.betterem: # improve the detection of Markup to emphasize text in Markdown
-        # smart_enable: all
-    - pymdownx.caret # define superscript
-    - pymdownx.mark # highlight text
-    - pymdownx.tilde # define subscript
-    - pymdownx.critic # track changes
-    - pymdownx.details # add collapsible call-outs
-    - pymdownx.emoji: # add inlines bundled and custom icons and emojis
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
     - pymdownx.superfences # define code blocks and nesting of code
-    - pymdownx.highlight: # highlight of code blocks
-        linenums_style: pymdownx-inline
-        # anchor_linenums: true # create anchor link on each line of code
-    - pymdownx.inlinehilite # highlight inline code blocks
-    - pymdownx.smartsymbols # convert some sequences of characters into their corresponding symbols
-    - pymdownx.snippets #  embed content from arbitrary files into a document
-    - pymdownx.tabbed: # group related content and code blocks under accessible tabs
-        alternate_style: true
-    - pymdownx.tasklist: # define list of task with checkbox
-        custom_checkbox: true
     - pymdownx.escapeall:
         hardbreak: true # use \ to create new line
         nbsp: true # use \<space> to create &nbsp;
-    # - pymdownx.keys # syntax ++ctrl+c++ does not look clear in MD document
-    - pymdownx.progressbar
+
+
 
 
 extra:
@@ -199,4 +199,3 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - js/view-bigimg.js
   - js/extra.js
-
