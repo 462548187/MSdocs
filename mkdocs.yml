@@ -7,8 +7,8 @@ site_dir: ./dist/docs
 
 copyright: Copyright &copy; 2022 <a href="https://www.sayweee.com">Weee!</a>, All Rights Reserved.
 
-hide:
-  - navigation
+#hide:
+#  - navigation
 
 edit_uri: "https://github.com/462548187/MSdocs/tree/master/docs"
 theme:
@@ -35,12 +35,12 @@ theme:
         accent: indigo  #强调色，默认蓝，可以交互的元素如悬停链接、按钮和滚动条
         toggle:
           icon: material/weather-sunny #图标，太阳
-          name: Switch to dark mode
+          name: 切换深色模式
       - media: "(prefers-color-scheme: dark)"
-        scheme: slate  #配色方案：深色模式
+        scheme:  slate #配色方案：深色模式
         toggle:
           icon: material/weather-night  #图标，月亮
-          name: Switch to light mode
+          name: 切换浅色模式
     font:  #字体，false 则阻止从Google加载字体
     # 内置隐私插件自动下载和自托管 Web 字体文件，无需阻止。其他字体使用附加样式表 extra.css 。
       text: Roboto  #常规字体，默认Roboto，正文、标题等，300、400、400i和700
@@ -99,13 +99,13 @@ plugins:
       # collapse_single_pages: true # replaced by navigation.indexes
   # - section-index # must be after awesome-pages, replaced by navigation.indexes
   - git-revision-date-localized:
-        enable_creation_date: true
+        enable_creation_date: false
         fallback_to_build_date: true
         type: iso_date
   - encryptcontent:
         hljs: false
-        arithmatex: false
-        mermaid2: false
+        arithmatex: true
+        mermaid2: true
         password_button: true
         remember_password: true
         default_expire_dalay: 24
