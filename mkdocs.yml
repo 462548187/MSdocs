@@ -9,11 +9,18 @@ copyright: Copyright &copy; 2022 <a href="https://www.sayweee.com">Weee!</a>, Al
 
 #hide:
 #  - navigation
+repo_name: "MeterSphere GitHub"
+repo_url: "https://github.com/metersphere/metersphere"
 
 edit_uri: "https://github.com/462548187/MSdocs/tree/master/docs"
+
 theme:
     name: material  #名称
     language: zh    #语言
+    highlightjs: true
+    hljs_languages:
+      - yaml
+      - django
     features:
       - navigation.top   #返回顶端
       - navigation.expand  #侧边栏全展开
@@ -25,9 +32,7 @@ theme:
       - search.share  #搜索共享
       - navigation.tabs # first top-level folders are shown as tabs
       - content.code.annotate # add comment to code blocks
-      - navigation.tabs # first top-level folders are shown as tabs
-
-
+    custom_dir: "theme"
     palette:     #切换昼夜模式的颜色，审美差就用默认，专业点就自定义
       - media: "(prefers-color-scheme: light)"
         scheme: default  #配色方案：浅色模式
@@ -46,13 +51,6 @@ theme:
       text: Roboto  #常规字体，默认Roboto，正文、标题等，300、400、400i和700
       code: Roboto Mono  #等宽字体，默认Roboto Mono，代码块，400
 
-    highlightjs: true
-    hljs_languages:
-        - yaml
-        - django
-
-    feature:
-      tabs: true
 
 
 
@@ -101,13 +99,6 @@ plugins:
         enable_creation_date: false
         fallback_to_build_date: true
         type: iso_date
-  - encryptcontent:
-        hljs: false
-        arithmatex: true
-        mermaid2: true
-        password_button: true
-        remember_password: true
-        default_expire_dalay: 24
 
   - exclude:
         glob:
@@ -118,10 +109,8 @@ plugins:
 
 markdown_extensions:  #推荐配置Markdown基本语法及其扩展
     - abbr #缩写或名词
-    - pymdownx.snippets  #片段，将任意文件或部分内容嵌入到文档中
+    - tables
     - admonition  #警告或标注
-    - pymdownx.details  #细节折叠
-    - pymdownx.superfences  #超级围栏
     - attr_list   #属性列表（按钮-颜色图标）
     - def_list   #定义列表
     - footnotes  #行内脚注
@@ -129,38 +118,34 @@ markdown_extensions:  #推荐配置Markdown基本语法及其扩展
     - md_in_html  #HTML 中的 Markdown
     - toc:  #目录
         toc_depth: 3 #目录深度，默认6，0则隐藏
-        title: On this page  #默认值，自动获取
         permalink: true   #每个标题的末尾添加段落符号锚链接，默认false
-#        permalink: ⚓︎  #每个标题的末尾添加自定义符号锚链接
         permalink_title: Anchor link to this section for reference #在悬停时显示并由屏幕阅读器阅读的锚链接的标题
         slugify: !!python/name:pymdownx.slugs.uslugify # convert title to html-compatible text
-    - tables #表格（未推荐）
-    - pymdownx.arithmatex:  #数学公式
-        generic: true
     - pymdownx.betterem:   #粗体斜体
         smart_enable: all
     - pymdownx.caret  #插入角标符号(`^`)
+    - pymdownx.critic
     - pymdownx.mark  #双等号(`==`)
     - pymdownx.tilde  #波浪号(`~`)
-    - pymdownx.critic:  #评论家(突出显示建议更改)，未推荐
-  #      mode: reject #应如何解析标记，默认view查看更改，accept是接受更改，reject是拒绝更改
     - pymdownx.keys   #键盘键和组合
+    - pymdownx.extra
+    - pymdownx.arithmatex
+    - pymdownx.magiclink
     - pymdownx.emoji:  #表情符号
         emoji_index: !!python/name:materialx.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
-  #      options: #默认无
-  #        custom_icons: #允许列出要在 Markdown 中使用的附加图标集的文件夹
-  #          - overrides/.icons
     - pymdownx.highlight:  #代码高亮，对代码块（SuperFences）和行内代码块（InlineHilite）的语法突出显示
          linenums_style: pymdownx-inline
     - pymdownx.inlinehilite  #行内高亮
     - pymdownx.smartsymbols  #智能符号
     - pymdownx.progressbar
+    - pymdownx.details  #细节折叠
+    - pymdownx.superfences  #超级围栏
+    - pymdownx.snippets  #片段，将任意文件或部分内容嵌入到文档中
     - pymdownx.tabbed:  #内容选项卡
         alternate_style: true  #启用内容选项卡替代样式，必须开启
     - pymdownx.tasklist:  #任务列表
         custom_checkbox: true   #切换复选框的呈现样式，将原生复选框样式替换为漂亮的图标
-  #      clickable_checkbox: true  #切换复选框是否可点击，默认false，不建议开
     - pymdownx.superfences:
         custom_fences:
           - name: mermaid
@@ -173,28 +158,24 @@ markdown_extensions:  #推荐配置Markdown基本语法及其扩展
     - pymdownx.escapeall:
         hardbreak: true # use \ to create new line
         nbsp: true # use \<space> to create &nbsp;
-
+    - lightgallery
 
 
 
 extra:
-  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
   analytics:
     provider: google
     property: UA-42618265-2 # or G-XXXXXXXXXX
 
+  version:
+    method: mike
+
   search:
     language: 'en,zh,jp'
 
-  generator: false # hide the line "Made with Material for MkDocs"
 
 extra_css:
-  - css/view-bigimg.css
   - css/extra.css
 
 extra_javascript:
-  - js/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - js/view-bigimg.js
   - js/extra.js
