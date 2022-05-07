@@ -60,7 +60,6 @@ nav:
     - 项目介绍: index.md
     - 通用功能:
         - 账号相关: user_manual/general/general_login.md
-        - 通用功能: user_manual/general/general.md
     - 测试跟踪:
           - 模块说明: user_manual/test_track/intro.md
           - 首页: user_manual/test_track/home.md
